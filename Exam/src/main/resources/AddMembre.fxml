@@ -12,6 +12,6 @@
       <TextField fx:id="prenomField" layoutX="178.0" layoutY="151.0" promptText="Prenom" />
       <TextField fx:id="email" layoutX="178.0" layoutY="215.0" promptText="Email" />
       <TextField fx:id="phoneField" layoutX="178.0" layoutY="273.0" promptText="Phone" />
-      <Button layoutX="178.0" layoutY="331.0" mnemonicParsing="false" onAction="#addMember" text="Button" />
+      <Button layoutX="178.0" layoutY="331.0" mnemonicParsing="false" onAction="#addMember" text="Inserer" />
    </children>
 </AnchorPane>
