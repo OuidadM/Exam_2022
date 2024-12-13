@@ -69,31 +69,7 @@ public class Membre {
         return phone;
     }
 
-    public Set<Membre> chargerListeMembre(String filePath) {
-        Set<Membre> membreSet = new HashSet<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-            String line = "";
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                boolean exists = false;
-                if (membreSet.size() > 0) {
-                    for (Membre m : membreSet) {
-                        if (m.getEmail().equals(parts[2]) || m.getPhone().equals(parts[3])) {
-                            exists = true;
-                        }
-                    }
-                }
-                if (!exists) {
-                    Membre m = new Membre(parts[0], parts[1], parts[2], parts[3]);
-                    membreSet.add(m);
-                }
-            }
-        } catch (IOException e) {
-            System.out.println("Erreur lors de la lecture du fichier: " + e.getMessage());
-            e.printStackTrace();
-        }
-        return membreSet;
-    }
+
 }
 
 

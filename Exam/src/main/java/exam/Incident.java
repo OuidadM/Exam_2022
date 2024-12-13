@@ -13,5 +13,11 @@ public class Incident {
     private LocalDateTime time;
     private String status;
     private Membre membre;
+    public Incident(String reference, String status, Membre membre) {
+        this.reference = reference;
+        this.time=LocalDateTime.now();
+        this.status=status;
+        this.membre=membre;
+    }
 
 }
